@@ -1,0 +1,414 @@
+body {
+    height: 100vh;
+    background: #F3F5FC;
+    margin: 0;
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+}
+
+.container .row {
+    display: flex;
+    height: 100vh;
+}
+
+.column.logo {
+    width: 15%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.column.text-buttons {
+    width: 60%;
+    height: 78%;
+
+    .buttons {
+        
+        .info-buttons {
+            text-align: start;
+            padding: 2px;
+            display: flex;
+            align-items: center;
+
+            span {
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 18px;
+                letter-spacing: 0em;
+                text-align: left;
+                margin-top: 2px;
+                margin-left: 4px;
+            }
+        }
+
+        .buttons-actions {
+
+            display: flex;
+            justify-content: space-between;
+
+            .btn-encriptar {
+                background: #0A3871;
+                color: #FFFFFF;
+                border-radius: 18px;
+                padding: 20px;
+                border: none;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 19px;
+                letter-spacing: 0em;
+                text-align: center;
+                width: 48%;
+                cursor: pointer;
+            }
+
+            .btn-encriptar:hover{
+                background: #1772e2;                
+            }
+
+            .btn-encriptar:active{
+                background: #0A3871;                
+            }
+
+            .btn-desencriptar {
+                background: #D8DFE8;
+                color: #0A3871;
+                border-radius: 18px;
+                padding: 20px;
+                border: #0A3871 solid 1px;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 19px;
+                letter-spacing: 0em;
+                text-align: center;
+                width: 48%;
+                cursor: pointer;
+            }
+
+            .btn-desencriptar:hover{
+                background: #d8dfe877;                
+            }
+
+            .btn-desencriptar:active{
+                background: #D8DFE8;                
+            }
+        }
+    }
+
+    .text-area {
+
+        height: 88%;
+        margin-top: 90px;
+
+        textarea {
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: none;
+            resize: none;
+            font-family: Inter;
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 48px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #0A3871;
+        }
+
+        textarea::placeholder {
+            font-family: Inter;
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 48px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #0A3871;
+        }
+
+        textarea:focus {
+            outline: none;
+        }
+    }
+}
+
+.column.card {
+    width: 25%;
+    background: white;
+    margin: 24px 24px 24px 24px;
+    border-radius: 32px;
+    box-shadow: 0px 24px 32px -8px #00000014;
+    display: flex;
+
+    .text-show-hide {
+
+        width: 100%;
+        text-align: left;
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        display: none;
+
+
+        button {
+            background: #FFFFFF;
+            color: #0A3871;
+            border-radius: 18px;
+            padding: 20px;
+            border: #0A3871 solid 1px;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19px;
+            letter-spacing: 0em;
+            text-align: center;       
+        }
+
+        .button-copiar{
+            margin-top: 10px;
+            cursor: pointer;            
+        }
+
+        .button-copiar:hover{
+            background: #a7c3e6;
+        }
+
+        .button-copiar:active{
+            background: #FFFFFF;
+        }
+
+        span {
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 36px;
+            letter-spacing: 0em;
+            overflow-y: auto;
+        }
+    }
+
+    .no-text {
+
+        display: flex;
+        align-items: center;
+
+        .text-reveal-area {
+
+            picture {
+                img {
+                    width: 80%;
+                }
+            }
+
+            span {
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 29px;
+                letter-spacing: 0em;
+                text-align: center;
+            }
+
+            p {
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+                letter-spacing: 0em;
+                text-align: center;
+            }
+        }
+    }
+}
+
+footer{
+    .footer-container{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        span{
+            font-size: 12px;
+            font-weight: 400;
+            line-height: normal;            
+        }
+    }
+
+    .footer-container > :nth-child(2){
+        margin-bottom: 12px;
+    }
+}
+
+/* Teléfonos móviles pequeños */
+@media only screen and (max-width: 425.9px) {
+    body{
+        height: 130vh;
+    }
+
+    .row {
+        flex-direction: column;
+        margin: 2rem 2rem 0rem 2rem;
+        height: 150vh !important;
+    }
+
+    .column.logo {
+        justify-content: flex-start;
+    }
+
+    .column.text-buttons {
+        width: 100%;
+        height: 60%;
+        display: contents;
+
+        .text-area {
+            margin: 0;
+            height: 20rem;
+
+            textarea {
+                height: 20rem;
+                margin-top: 5rem;
+            }
+        }
+    }
+
+    .column.card {
+        width: 100%;
+        margin: 2rem 0rem 2rem 0rem;
+
+        .text-show-hide {
+
+            span {
+                font-size: 24px;
+                font-weight: 400;
+                line-height: 36px;
+                height: 7rem;
+            }
+        }
+    }
+
+    .no-text {
+
+        /* display: none !important; */
+
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+
+        .text-reveal-area {
+
+            picture {
+                img {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .buttons {
+        .buttons-actions {
+            flex-direction: column;
+            align-items: center;
+
+            .btn {
+                width: 100% !important;
+                margin-top: 1rem;
+            }
+        }
+    }
+}
+
+/* Teléfonos móviles y tablets en orientación vertical */
+@media only screen and (min-width: 426px) and (max-width: 991px) {
+
+    body{
+        height: 115vh;
+    }
+
+    .row {
+        flex-direction: column;
+        margin: 2rem 2rem 0rem 2rem;
+    }
+
+    .column.logo {
+        justify-content: flex-start;
+    }
+
+    .column.text-buttons {
+        width: 100%;
+        height: 60%;
+        display: contents;
+
+        .text-area {
+            height: 20rem;
+            margin: 0;
+            margin-top: 50px;
+            textarea{
+                height: 20rem;
+            }
+        }
+    }
+
+    .no-text {
+
+        /* display: none !important; */
+
+        display: flex;
+        align-items: center;
+
+        .text-reveal-area {
+
+            picture {
+                img {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .column.card {
+
+        width: 100%;
+        height: 50%;
+        margin: 2rem 0rem 2rem 0rem;
+        justify-content: center;
+
+        .text-reveal-area {
+
+            span {
+                font-size: 10px;
+                font-weight: 400;
+                line-height: 36px;
+                height: 7rem;
+            }
+        }
+
+        .no-text {
+            padding: 1rem;
+        }
+    }
+}
+
+/* Tablets en orientación horizontal y computadoras portátiles */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .column.card {
+
+        .text-show-hide {
+
+            span {
+                font-size: 24px;
+                font-weight: 400;
+                line-height: 36px;
+            }
+        }
+    }
+}

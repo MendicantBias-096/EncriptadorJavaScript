@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alura Challenge</title>
+    <link rel="icon" href="assets/ico/Vector.ico">
+    <!-- Enlace a Estilos -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="column logo">
+                <picture>
+                    <img src="assets/svg/Vector.svg" alt="AluraLogo">
+                </picture>
+            </div>
+            <div class="column text-buttons">
+                <div class="text-area">
+                    <textarea id="mensaje" placeholder="Ingrese el texto aquí"></textarea>
+                </div>
+                <div class="buttons">
+                    <div class="info-buttons">
+                        <i>
+                            <img src="assets/svg/bi_exclamation-circle-fill.svg" alt="Icono">
+                        </i>
+                        <span>Solo letras minúsculas y sin acentos</span>
+                    </div>
+                    <div class="buttons-actions">
+                        <button class="btn btn-encriptar" type="button" onclick="encriptarMensaje()">Encriptar</button>
+                        <button class="btn btn-desencriptar" type="button"
+                            onclick="desencriptarMensaje()">Desencriptar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="column card">
+
+                <div class="text-show-hide">
+                    <span id="mensaje-procesado">
+
+                    </span>
+                    <button class="btn button-copiar" type="button" onclick="copiar()"> Copiar </button>
+                </div>
+
+                <div class="no-text">
+
+                    <div class="text-reveal-area">
+                        <picture>
+                            <img src="assets/svg/Muñeco.svg" alt="AluraLogo">
+                        </picture>
+                        <span>
+                            Ningún mensaje fue encontrado
+                        </span>
+                        <p>Ingresa el texto que desses encriptar o desencriptar</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <span>Desarrollado por Arturo Jacome - Febero 2024</span>
+            <span>Power by: Oracle x Alura Latam</span>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
